@@ -1,8 +1,9 @@
 import { createTheme } from '@mui/material';
-import { blue, cyan, grey, red, yellow } from '@mui/material/colors';
+import { blue, red } from '@mui/material/colors';
 
 export const DarkTheme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
       main: '#45aaf2',
       dark: '#2d98da',
@@ -18,6 +19,11 @@ export const DarkTheme = createTheme({
     background: {
       paper: '#303134',
       default: '#202124',
+    },
+  },
+  typography: {
+    allVariants: {
+      color: 'white'
     }
   }
 });
