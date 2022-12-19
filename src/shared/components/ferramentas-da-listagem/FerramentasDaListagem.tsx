@@ -1,5 +1,7 @@
 import { Box, Button, Paper, TextField, useTheme, Icon } from "@mui/material";
 
+import { Eviroment } from "../../environment";
+
 interface IFerramentasDeListagemProps {
   textoDaBusca?: string;
   mostrarInputBusca?: boolean;
@@ -32,7 +34,7 @@ export const FerramentasDaListagem: React.FC<IFerramentasDeListagemProps> = ({
       {mostrarInputBusca && (
         <TextField
           size="small"
-          placeholder="Pesquisar..."
+          placeholder={Eviroment.INPUT_DE_BUSCA}
           value={textoDaBusca}
           onChange={(e) => aoMudarTextoDeBusca?.(e.target.value)}
         />)}
